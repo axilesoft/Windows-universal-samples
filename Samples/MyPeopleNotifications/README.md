@@ -1,4 +1,14 @@
-﻿<!---
+---
+topic: sample
+languages:
+- csharp
+- cpp
+products:
+- windows
+- uwp
+---
+
+<!---
   category: ContactsAndCalendar
   samplefwlink: http://go.microsoft.com/fwlink/?LinkID=859519
 --->
@@ -30,6 +40,9 @@ To obtain information about Windows 10 development, go to the [Windows Dev Cente
 To obtain information about Microsoft Visual Studio and the tools for developing Windows apps, go to [Visual Studio](http://go.microsoft.com/fwlink/?LinkID=532422)
 
 ## Related topics
+
+### Samples
+[ContactPanel] (../ContactPanel)
 
 ### Notifications
 

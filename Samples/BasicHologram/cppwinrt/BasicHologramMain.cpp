@@ -7,7 +7,6 @@
 using namespace BasicHologram;
 using namespace concurrency;
 using namespace Microsoft::WRL;
-using namespace Platform;
 using namespace std::placeholders;
 using namespace winrt::Windows::Foundation::Numerics;
 using namespace winrt::Windows::Gaming::Input;
@@ -32,9 +31,9 @@ BasicHologramMain::BasicHologramMain(std::shared_ptr<DX::DeviceResources> const&
         OnGamepadAdded(nullptr, gamepad);
     }
 
-    m_canGetHolographicDisplayForCamera = Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent("Windows.Graphics.Holographic.HolographicCamera", "Display");
-    m_canGetDefaultHolographicDisplay = Windows::Foundation::Metadata::ApiInformation::IsMethodPresent("Windows.Graphics.Holographic.HolographicDisplay", "GetDefault");
-    m_canCommitDirect3D11DepthBuffer = Windows::Foundation::Metadata::ApiInformation::IsMethodPresent("Windows.Graphics.Holographic.HolographicCameraRenderingParameters", "CommitDirect3D11DepthBuffer");
+    m_canGetHolographicDisplayForCamera = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Holographic.HolographicCamera", L"Display");
+    m_canGetDefaultHolographicDisplay = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Holographic.HolographicDisplay", L"GetDefault");
+    m_canCommitDirect3D11DepthBuffer = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Holographic.HolographicCameraRenderingParameters", L"CommitDirect3D11DepthBuffer");
 }
 
 void BasicHologramMain::SetHolographicSpace(HolographicSpace const& holographicSpace)
@@ -384,8 +383,8 @@ void BasicHologramMain::OnLocatabilityChanged(SpatialLocator const& sender, winr
     case SpatialLocatability::Unavailable:
         // Holograms cannot be rendered.
     {
-        winrt::hstring message = L"Warning! Positional tracking is " + std::to_wstring(int(sender.Locatability())) + L".\n";
-        OutputDebugStringW(message.data());
+        std::wstring message = L"Warning! Positional tracking is " + std::to_wstring(int(sender.Locatability())) + L".\n";
+        OutputDebugStringW(message.c_str());
     }
     break;
 

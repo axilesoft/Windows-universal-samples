@@ -22,5 +22,6 @@ Platform::Array<Scenario>^ MainPage::scenariosInner = ref new Platform::Array<Sc
     { "Completion Notifications", "SDKTemplate.Scenario3_Notifications" },
     { "Completion Groups", "SDKTemplate.Scenario4_CompletionGroups" },
     { "Random Access Downloads", "SDKTemplate.Scenario5_RandomAccess" },
-
+    { "Recoverable Errors", "SDKTemplate.Scenario6_RecoverableErrors" },
+    { "Download Reordering", "SDKTemplate.Scenario7_DownloadReordering" },
 };

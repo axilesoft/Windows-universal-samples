@@ -25,7 +25,9 @@ namespace SDKTemplate
             new Scenario() { Title="File Upload", ClassType=typeof(Scenario2_Upload)},
             new Scenario() { Title="Completion Notifications", ClassType=typeof(Scenario3_Notifications)},
             new Scenario() { Title="Completion Groups", ClassType=typeof(Scenario4_CompletionGroups)},
-            new Scenario() { Title="Random Access Downloads", ClassType=typeof(Scenario5_RandomAccess)}
+            new Scenario() { Title="Random Access Downloads", ClassType=typeof(Scenario5_RandomAccess)},
+            new Scenario() { Title="Recoverable Errors", ClassType=typeof(Scenario6_RecoverableErrors)},
+            new Scenario() { Title="Download Reordering", ClassType=typeof(Scenario7_DownloadReordering)},
         };
     }
 
